@@ -1,190 +1,215 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV Professionnel</title>
-<link rel="stylesheet" href="bootstrap.min.css">
-<style>
-    .persoliste1 {
-        display: none;
-    }
-    ul img {
-        width: 30px; /* Ajustez cette valeur pour personnaliser la taille des icônes */
-        height: 30px; /* Ajustez cette valeur pour personnaliser la taille des icônes */
-    }
-    .env, .a1 {
-        text-decoration: none;
-        color: inherit;
-    }
-    
-    .tt{
-        display: none;
-    }
-    .list-unstyled li {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-    }
-    .list-unstyled li img {
-        margin-right: 10px;
-    }
-    @media all and (max-width: 550px) {
-        .persoliste {
-            display: none;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio professionnel de Mbainaissem Clotaire - Développeur et Data Scientist">
+    <title>Mbainaissem Clotaire - Portfolio Professionnel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --light-bg: #f8f9fa;
         }
-        .persoliste1 {
-            display: block;
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
         }
-        .tt{
-            display: inline;
+
+        .profile-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
         }
-        .btn-secondary {
-            display: none;
+
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border: 5px solid white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .contacts {
-            display: block;
+
+        .section-title {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .skill-badge {
+            background-color: var(--light-bg);
+            border: 1px solid #dee2e6;
+            margin: 0.25rem;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+        }
+
+        .contact-list i {
+            width: 30px;
             text-align: center;
-            margin-top: 20px;
+            color: var(--secondary-color);
         }
-    }
-    .progress-bar {
-        width: 75%; /* Ajustez cette valeur pour personnaliser la taille de la barre de progression */
-    }
-</style>
+
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+        }
+    </style>
 </head>
 <body>
-<header class="container-fluid bg-secondary text-white py-2">
-    <div class="row">
-        <h1 class="text-center w-100">BIENVENUE DANS MON CURRICULUM VITAE</h1>
-    </div>
-</header>
-<div class="container py-1">
-    <div class="row">
-        <div class="col-md-4 bg-success text-white p-4">
-            <div class="text-center">
-                <img src="https://i.imgur.com/fhja1Of.jpeg" class="rounded-circle" alt="Votre Photo" width="120px" height="120px">
-                <h2>MBAINAISSEM CLOTAIRE</h2>
-                <p>PROFIL PROFESSIONNEL</p>
-                <p>Motivé, dynamique et sérieux</p>
-                <br><br>
-                <h4>02/09/2001</h4>
-                <h4>Tchadienne</h4>
-                <h4>Male</h4>
-                <br><br>
-                <h3 class="persoliste">COORDONNÉES</h3>
-                <ul class="list-unstyled persoliste">
-                    <li><img src="phone_30px.png" alt=""><a href="tel:+237697817213" class="a1">Telephone</a></li>
-                    <li><img src="secured_letter_50px.png" alt=""><a href="mailto:closygolf@gmail.com" class="a1">closygolf@gmail.com</a></li>
-                    <li><img src="whatsapp_30px.png" alt=""><a href="https://wa.me/237697817213" class="a1" target="_blank">Whatsapp</a></li>
-                    <li><img src="facebook_26px.png" alt=""><a href="https://www.facebook.com/profile.php?id=100080359934900" class="a1" target="_blank">Facebook</a></li>
-                    <li><img src="linkedin_50px.png" alt=""><a href="https://www.linkedin.com/in/clotaire-mbainaissem-549b88261" class="a1" target="_blank">Linkedin</a></li>
-                    <li><img src="region_50px.png" alt=""> Moundou, Tchad</li>
-                </ul>
-                <h3 class="persoliste">TÉLÉCHARGEMENT</h3>
-                <ul class="list-unstyled persoliste">
-                    <li><img src="pdf_40px.png" alt=""><a href="CV professionnel gris simple.pdf" class="a1" download>Obtenir CV en PDF</a></li>
-                    <li><img src="folder_50px.png" alt=""><a href="https://drive.google.com/folderview?id=1ErLvBUXZ0KgMTQojxda5PqrRJDRXXdz_" class="a1">Pièce jointe</a></li>
-                </ul>
-            </div>
+    <header class="profile-header">
+        <div class="container text-center">
+            <img src="https://i.imgur.com/fhja1Of.jpeg" class="profile-photo rounded-circle" alt="Mbainaissem Clotaire">
+            <h1 class="mt-3 mb-0">MBAINAISSEM CLOTAIRE</h1>
+            <p class="lead">Développeur Full Stack & Aspirant Data Scientist</p>
         </div>
-        <div class="col-md-8 bg-secondary text-white p-4">
-            <h3>FORMATION ET DIPLÔMES</h3>
-            <ul class="list-unstyled">
-                <li>Baccalauréat - Lycée Notre Dame du Tchad 2019 – 2020</li>
-                <li>Licence I - Université de Ngaoundere 2021 – 2022</li>
-                <li>Licence II - Université de Ngaoundere 2022 – 2023</li>
-                <li>Licence III - Université de Ngaoundere 2023 – 2024</li>
-            </ul>
-            
-            <h3>MES CONNAISSANCES</h3>
-            <ul class="list-unstyled">
-                <li>Conception des Systèmes d'Information</li>
-                <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px;width: 40%;">
-                    <div class="progress-bar bg-dark " style="width: 75%"></div>
-                </div> 
-                <li>Management des Projets Informatiques</li>
-                <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px;width: 40%;">
-                    <div class="progress-bar bg-dark " style="width: 75%"></div>
-                </div> 
-                <li>Design des Systèmes d'Information</li>
-                <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px;width: 40%;">
-                    <div class="progress-bar bg-dark" style="width: 75%"></div>
-                </div> 
-                <li>Programmation Web</li>
-                <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px;width: 40%;">
-                    <div class="progress-bar bg-dark" style="width: 75%"></div>
-                </div> 
-                <li>Administration Réseaux</li>
-                <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px;width: 40%;">
-                    <div class="progress-bar bg-dark" style="width: 50%"></div>
-                </div> 
-                <li>Traitement des Données en Python</li>
-                <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px;width: 40%;">
-                    <div class="progress-bar bg-dark" style="width: 45%"></div>
-                </div> 
-            </ul>
-            <h3>MES CERTIFICATIONS</h3>
-            <ul class="list-unstyled">
-                <li>Certification en Machine learnig et deep learning sur Udemy</li>
-                <li>Certification en React.js sur Udemy</li>
-                <li>Certification en Management Administrative sur Udemy</li>
-                <li>Certification en Photoshop 2024 sur Udemy</li>
-                <li>Certification en Real state Business sur Udemy</li>
-                <li>Certification en Whatsapp Marketing sur Udemy</li>
-                <li>Certification en SQL sur Sololearn</li>
-                <li>Certification en Programmation Web sur Sololearn</li>
-            </ul>
-            <h3>MES PROJETS</h3>
-            <ul class="list-unstyled">
-                <li><h5>Projet Marché Noir</h5>
-                    <p>Ce projet concerne une application web de marché noir pour les étudiants et vendeurs de Dang bini.</p>
-                </li>
-                <li><h5>Projet de Système de Gestion</h5>
-                    <p>Ce projet concerne des applications web de gestion de Bar, Dépôt et Hébergement.</p>
-                </li>
-            </ul>
-            <h3>MES OBJECTIFS PROFESSIONNELS</h3>
-            <ul class="list-unstyled">
-                <li>Être un Data Scientist Professionnel</li>
-                <li>Conception des Systèmes Complexes et Autonomes</li>
-                <li>Création de Startups</li>
-            </ul>
-            <h3>LANGUES</h3>
-            <p>Français, Anglais : Niveau Moyen</p>
-            <h3 class="tt">COORDONNES</h3>
-            <div class="contacts persoliste1">
-                
-                <ul class="list-unstyled">
-                    <li><img src="phone_30px.png" alt=""><a href="tel:+237697817213" class="a1">Telephone</a></li>
-                    <li><img src="secured_letter_50px.png" alt=""><a href="mailto:closygolf@gmail.com" class="a1">closygolf@gmail.com</a></li>
-                    <li><img src="whatsapp_30px.png" alt=""><a href="https://wa.me/237697817213" class="a1" target="_blank">Whatsapp</a></li>
-                    <li><img src="facebook_26px.png" alt=""><a href="https://www.facebook.com/profile.php?id=100080359934900" class="a1" target="_blank">Facebook</a></li>
-                    <li><img src="linkedin_50px.png" alt=""><a href="www.linkedin.com/in/clotaire-mbainaissem-549b88261" class="a1" target="_blank">Linkedin</a></li>
-                    <li><img src="region_50px.png" alt=""> Moundou, Tchad</li>
-                </ul>
-            </div>
-            <h3 class="tt">TELECHARGEMENTS</h3>
-            <div class="contacts persoliste1">
-                
-                <ul class="list-unstyled">
-                    <li><img src="pdf_40px.png" alt=""><a href="CV professionnel gris simple.pdf" class="a1" download>Obtenir CV en PDF</a></li>
-                    <li><img src="folder_50px.png" alt=""><a href="https://drive.google.com/folderview?id=1ErLvBUXZ0KgMTQojxda5PqrRJDRXXdz_" class="a1">Pièce jointe</a></li> 
-                </ul>
+    </header>
+
+    <main class="container py-5">
+        <div class="row">
+            <!-- Colonne de gauche -->
+            <div class="col-lg-4 mb-4">
+                <section class="mb-5">
+                    <h3 class="section-title">Profil</h3>
+                    <p class="text-muted">Jeune professionnel motivé spécialisé en développement web et sciences des données, avec une forte aptitude à concevoir des solutions innovantes.</p>
+                </section>
+
+                <section class="mb-5">
+                    <h3 class="section-title">Contact</h3>
+                    <ul class="list-unstyled contact-list">
+                        <li class="mb-2">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+237697817213" class="text-decoration-none text-dark">+237 697 817 213</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:closygolf@gmail.com" class="text-decoration-none text-dark">closygolf@gmail.com</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fab fa-linkedin"></i>
+                            <a href="https://linkedin.com/in/clotaire-mbainaissem-549b88261" target="_blank" class="text-decoration-none text-dark">LinkedIn</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Moundou, Tchad
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="mb-5">
+                    <h3 class="section-title">Compétences Techniques</h3>
+                    <div class="d-flex flex-wrap">
+                        <span class="skill-badge rounded-pill px-3 py-1">Python</span>
+                        <span class="skill-badge rounded-pill px-3 py-1">React.js</span>
+                        <span class="skill-badge rounded-pill px-3 py-1">SQL</span>
+                        <span class="skill-badge rounded-pill px-3 py-1">Machine Learning</span>
+                        <span class="skill-badge rounded-pill px-3 py-1">Bootstrap</span>
+                        <span class="skill-badge rounded-pill px-3 py-1">Gestion de Projet</span>
+                    </div>
+                </section>
+
+                <section class="mb-5">
+                    <h3 class="section-title">Langues</h3>
+                    <ul class="list-unstyled">
+                        <li>Français - Courant</li>
+                        <li>Anglais - Intermédiaire</li>
+                    </ul>
+                </section>
             </div>
 
-            <h3>CENTRES D'INTÉRÊT</h3>
-            <p>Équitation, football, musique (Rap)</p>
-            
+            <!-- Colonne de droite -->
+            <div class="col-lg-8">
+                <section class="mb-5">
+                    <h3 class="section-title">Expérience Académique</h3>
+                    <div class="timeline-item">
+                        <h5>Licence en Informatique</h5>
+                        <p class="text-muted">Université de Ngaoundere | 2021 - 2024</p>
+                        <ul>
+                            <li>Spécialisation en systèmes d'information</li>
+                            <li>Projets académiques sur la gestion de données</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="mb-5">
+                    <h3 class="section-title">Certifications</h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h6 class="card-title">Machine Learning & Deep Learning</h6>
+                                    <p class="card-text text-muted small">Udemy | 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Ajouter d'autres certifications de même format -->
+                    </div>
+                </section>
+
+                <section class="mb-5">
+                    <h3 class="section-title">Projets Réalisés</h3>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Plateforme e-commerce "Marché Noir"</h5>
+                            <p class="card-text">Application web pour étudiants et vendeurs avec système de gestion de stocks et paiements en ligne.</p>
+                            <p class="text-muted small">Technologies : React.js, Node.js, MongoDB</p>
+                        </div>
+                    </div>
+                    <!-- Ajouter d'autres projets -->
+                </section>
+
+                <section class="mb-5">
+                    <h3 class="section-title">Objectifs Professionnels</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-arrow-right text-primary me-2"></i>
+                            Devenir expert en intelligence artificielle
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-arrow-right text-primary me-2"></i>
+                            Développer des solutions innovantes pour l'Afrique
+                        </li>
+                    </ul>
+                </section>
+            </div>
         </div>
-    </div>
-</div>
-<footer class="container-fluid bg-secondary text-white py-1 mt-2">
-    <div class="text-center">
-        <p>&copy; 2024 Mbainaissem Clotaire</p>
-    </div>
-</footer>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="bootstrap.min.js"></script>
+    </main>
+
+    <footer class="bg-light py-4 no-print">
+        <div class="container text-center">
+            <div class="mb-3">
+                <a href="CV.pdf" download class="btn btn-primary me-2">
+                    <i class="fas fa-download me-2"></i>Télécharger CV
+                </a>
+                <a href="#contact" class="btn btn-outline-secondary">
+                    <i class="fas fa-envelope me-2"></i>Contact
+                </a>
+            </div>
+            <p class="text-muted small mb-0">&copy; 2024 Mbainaissem Clotaire. Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
