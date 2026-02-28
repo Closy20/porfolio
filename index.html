@@ -3,252 +3,393 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mbainaissem Clotaire | IT & Réseaux</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-    <link rel="stylesheet" href="style.css">
-
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
-    <script defer src="main.js"></script>
+    <meta name="description" content="Portfolio de Mbainaissem Clotaire - Informaticien spécialisé en infrastructure IT, support et data">
+    <title>Mbainaissem Clotaire - Portfolio IT & Data</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1a2b3c;
+            --secondary-color: #2575fc;
+            --accent-color: #00b4d8;
+            --light-bg: #f1f5f9;
+        }
+        body {
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+            background-color: #fafbfc;
+            color: #1e293b;
+        }
+        .profile-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0f172a 100%);
+            color: white;
+            padding: 2.5rem 0 2rem;
+            border-bottom: 4px solid var(--secondary-color);
+        }
+        .profile-photo {
+            width: 170px;
+            height: 170px;
+            border: 4px solid white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            object-fit: cover;
+        }
+        .section-title {
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 1rem;
+            margin: 2rem 0 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .skill-badge {
+            background: white;
+            border: 1px solid #d1d5db;
+            color: #1e293b;
+            padding: 0.4rem 1rem;
+            margin: 0.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            transition: all 0.2s;
+        }
+        .skill-badge:hover {
+            background: var(--secondary-color);
+            color: white;
+            border-color: var(--secondary-color);
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+            border-left: 2px dashed #cbd5e1;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -0.5rem;
+            top: 0.2rem;
+            width: 1rem;
+            height: 1rem;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 2px 6px rgba(37,99,235,0.3);
+        }
+        .contact-list i {
+            width: 28px;
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+        }
+        .contact-list a, .contact-list span {
+            color: #334155;
+            transition: color 0.2s;
+        }
+        .contact-list a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline !important;
+        }
+        .card-custom {
+            border: none;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #e9eef2;
+        }
+        .card-custom:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+        }
+        .ref-card {
+            background: var(--light-bg);
+            padding: 1rem;
+            border-radius: 1rem;
+            border-left: 3px solid var(--secondary-color);
+        }
+        .footer-buttons .btn {
+            border-radius: 50px;
+            padding: 0.5rem 1.8rem;
+            font-weight: 500;
+        }
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white; }
+        }
+    </style>
 </head>
-
 <body>
-
-<main>
-
-<!-- ===== SIDEBAR ===== -->
-<aside>
-    <ul class="Links">
-        <li onclick="Navigate(0)" class="activeLink">
-            <i class="fa-solid fa-house"></i>
-            <p>Accueil</p>
-        </li>
-        <li onclick="Navigate(1)">
-            <i class="fa-solid fa-user"></i>
-            <p>Profil</p>
-        </li>
-        <li onclick="Navigate(2)">
-            <i class="fa-solid fa-briefcase"></i>
-            <p>Compétences</p>
-        </li>
-        <li onclick="Navigate(3)">
-            <i class="fa-solid fa-diagram-project"></i>
-            <p>Projets</p>
-        </li>
-        <li onclick="Navigate(4)">
-            <i class="fa-solid fa-envelope"></i>
-            <p>Contact</p>
-        </li>
-    </ul>
-</aside>
-
-<div class="swiper mySwiper">
-<div class="SlideContainer swiper-wrapper">
-
-<!-- ===== ACCUEIL ===== -->
-<div class="swiper-slide home-slide">
-    <div class="HomeContent">
-        <h1>Mbainaissem <span class="stylized-name">Clotaire</span></h1>
-        <h2><span class="proffesions">IT Support | Réseaux | Cloud | Datacenter</span></h2>
-
-        <p class="heroline">
-            Informaticien spécialisé en TIC avec expérience en télécommunications,
-            banques et infrastructures numériques. Actuellement chez
-            Huawei Technologies Tchad (DATACOM IP).
-        </p>
-
-        <div class="buttonGroup">
-            <button onclick="Navigate(4)">Me Contacter</button>
-            <button onclick="Navigate(3)">Voir Mes Projets</button>
+    <!-- En-tête avec photo et identité -->
+    <header class="profile-header">
+        <div class="container text-center">
+            <img src="https://i.imgur.com/fhja1Of.jpeg" class="profile-photo rounded-circle" alt="Mbainaissem Clotaire">
+            <h1 class="mt-3 mb-1 display-5 fw-bold">MBAINAISSEM CLOTAIRE</h1>
+            <p class="lead fs-5">Informaticien spécialisé IT & Data | Support infrastructure & Réseaux</p>
+            <div class="d-flex justify-content-center flex-wrap gap-3 mt-2 small">
+                <span><i class="fas fa-calendar-alt me-1"></i> 02/09/2001</span>
+                <span><i class="fas fa-flag me-1"></i> Tchadienne</span>
+                <span><i class="fas fa-venus-mars me-1"></i> Homme</span>
+            </div>
         </div>
-    </div>
+    </header>
 
-    <div class="SideImg">
-        <div class="top-right-corner">
-            <hr class="hr1"><hr class="hr2">
+    <main class="container py-4">
+        <div class="row g-4">
+            <!-- COLONNE GAUCHE (informations générales, contact, compétences, langues, centres, références) -->
+            <div class="col-lg-4">
+                <!-- Profil -->
+                <section class="mb-4">
+                    <h3 class="section-title">Profil</h3>
+                    <p class="text-muted" style="text-align: justify;">Informaticien spécialisé en technologies de l’information et de la communication (TIC), avec une expérience dans des environnements exigeants (télécommunications, banques, projets d’infrastructures numériques). Compétent en support IT, administration systèmes et réseaux, maintenance des équipements, et assistance aux utilisateurs. Motivé à mettre mes compétences techniques au service d’organisations humanitaires et de développement.</p>
+                </section>
+
+                <!-- Contact détaillé -->
+                <section class="mb-4">
+                    <h3 class="section-title">Contact</h3>
+                    <ul class="list-unstyled contact-list">
+                        <li class="mb-3"><i class="fas fa-phone-alt"></i> <a href="tel:+23564793416" class="text-decoration-none">+235 64 79 34 16</a> / <a href="tel:+23566450370" class="text-decoration-none">66 45 03 70</a></li>
+                        <li class="mb-3"><i class="fas fa-envelope"></i> <a href="mailto:closygolf@gmail.com" class="text-decoration-none">closygolf@gmail.com</a></li>
+                        <li class="mb-3"><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/clotaire-mbainaissem-549b88261" target="_blank" class="text-decoration-none">linkedin.com/in/clotaire</a></li>
+                        <li class="mb-3"><i class="fas fa-map-marker-alt"></i> <span>Walia, Ndjamena – Tchad</span></li>
+                        <li class="mb-3"><i class="fas fa-globe"></i> <a href="https://closy20.github.io/portfolio/index.html" target="_blank" class="text-decoration-none">closy20.github.io/portfolio</a></li>
+                    </ul>
+                </section>
+
+                <!-- Compétences techniques (regroupées) -->
+                <section class="mb-4">
+                    <h3 class="section-title">Compétences clés</h3>
+                    <div class="d-flex flex-wrap">
+                        <span class="skill-badge">Conception SI (UML)</span>
+                        <span class="skill-badge">Admin systèmes & réseaux</span>
+                        <span class="skill-badge">Développement web (Django)</span>
+                        <span class="skill-badge">Gestion de projet IT</span>
+                        <span class="skill-badge">Bases de données (SQL)</span>
+                        <span class="skill-badge">Big Data & automatisme</span>
+                        <span class="skill-badge">Virtualisation (ESXi)</span>
+                        <span class="skill-badge">Active Directory, GPO</span>
+                        <span class="skill-badge">Firewall, VPN, VPC</span>
+                        <span class="skill-badge">Cloud (IAM, Linux)</span>
+                        <span class="skill-badge">CCNA (préparation)</span>
+                    </div>
+                </section>
+
+                <!-- Langues -->
+                <section class="mb-4">
+                    <h3 class="section-title">Langues</h3>
+                    <ul class="list-unstyled ps-0">
+                        <li class="mb-2"><i class="fas fa-circle me-2 text-primary small"></i>Français – Très bon (courant)</li>
+                        <li class="mb-2"><i class="fas fa-circle me-2 text-primary small"></i>Anglais – Intermédiaire (B1/B2)</li>
+                    </ul>
+                </section>
+
+                <!-- Centres d'intérêt -->
+                <section class="mb-4">
+                    <h3 class="section-title">Centres d'intérêt</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-futbol me-2 text-secondary"></i>Sports (football)</li>
+                        <li class="mb-2"><i class="fas fa-microchip me-2 text-secondary"></i>Nouvelles technologies, data science</li>
+                        <li class="mb-2"><i class="fas fa-book-open me-2 text-secondary"></i>Recherche & veille technique</li>
+                    </ul>
+                </section>
+
+                <!-- Références professionnelles -->
+                <section class="mb-4">
+                    <h3 class="section-title">Références</h3>
+                    <div class="ref-card mb-3">
+                        <p class="mb-1 fw-semibold">Bark Madengar</p>
+                        <small class="text-muted">Coris Bank International</small><br>
+                        <a href="mailto:bmadengarmadjeadoum@coris-bank.com" class="small text-decoration-none">bmadengarmadjeadoum@coris-bank.com</a>
+                    </div>
+                    <div class="ref-card mb-3">
+                        <p class="mb-1 fw-semibold">Neuba Patekale</p>
+                        <small class="text-muted">H-Partners</small><br>
+                        <a href="mailto:neuba.patekale@h-partners.com" class="small text-decoration-none">neuba.patekale@h-partners.com</a>
+                    </div>
+                    <div class="ref-card mb-3">
+                        <p class="mb-1 fw-semibold">Ndoude Walgori</p>
+                        <small class="text-muted">Huawei Technologies Tchad</small><br>
+                        <a href="mailto:ndude.ajim.walgori1@huawei.com" class="small text-decoration-none">ndude.ajim.walgori1@huawei.com</a>
+                    </div>
+                </section>
+            </div>
+
+            <!-- COLONNE DROITE (parcours académique, certifications, expériences, projets) -->
+            <div class="col-lg-8">
+                <!-- Formations académiques -->
+                <section class="mb-4">
+                    <h3 class="section-title">Formation universitaire</h3>
+                    <div class="timeline-item">
+                        <h5 class="fw-semibold">Licence III Informatique</h5>
+                        <p class="text-muted mb-1">Université de Ngaoundéré | 2023-2024</p>
+                        <p class="small">Spécialisation systèmes d'information, projets de gestion de données.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5 class="fw-semibold">Licence II Informatique</h5>
+                        <p class="text-muted mb-1">Université de Ngaoundéré | 2022-2023</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5 class="fw-semibold">Licence I Informatique</h5>
+                        <p class="text-muted mb-1">Université de Ngaoundéré | 2021-2022</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5 class="fw-semibold">Bac scientifique Série C</h5>
+                        <p class="text-muted mb-1">Lycée Notre Dame du Tchad | 2019-2020</p>
+                    </div>
+                </section>
+
+                <!-- Certifications détaillées -->
+                <section class="mb-4">
+                    <h3 class="section-title">Certifications & parcours</h3>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="card-custom p-3 h-100">
+                                <h6 class="fw-bold"><i class="fas fa-shield-alt me-2 text-secondary"></i> Cybersecurity (Huawei ICT Academy)</h6>
+                                <ul class="small ps-3 mb-0 text-muted">
+                                    <li>Sécurité réseaux et systèmes</li>
+                                    <li>Gestion firewall, VPN, certificats</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-custom p-3 h-100">
+                                <h6 class="fw-bold"><i class="fas fa-cloud me-2 text-secondary"></i> Cloud Computing (Huawei ICT)</h6>
+                                <ul class="small ps-3 mb-0 text-muted">
+                                    <li>IAM, Linux, bases de données cloud</li>
+                                    <li>VPC, sous-réseaux, load balancing</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-custom p-3 h-100">
+                                <h6 class="fw-bold"><i class="fas fa-network-wired me-2 text-secondary"></i> Cisco Networking Labs (Udemy)</h6>
+                                <p class="small text-muted mb-0">Préparation CCNA, labs pratiques EVE-NG.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-custom p-3 h-100">
+                                <h6 class="fw-bold"><i class="fas fa-chart-line me-2 text-secondary"></i> Data Analyst (MTF Institute)</h6>
+                                <p class="small text-muted mb-0">Analyse de données, visualisation, Udemy 2025.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-custom p-3 h-100">
+                                <h6 class="fw-bold"><i class="fas fa-robot me-2 text-secondary"></i> Machine Learning & Deep Learning</h6>
+                                <p class="small text-muted mb-0">Udemy 2024 – bases du ML, classification.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-custom p-3 h-100">
+                                <h6 class="fw-bold"><i class="fas fa-language me-2 text-secondary"></i> TOEFL iBT Prep (MTF Institute)</h6>
+                                <p class="small text-muted mb-0">Préparation à l'examen (Portugal).</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Expériences professionnelles -->
+                <section class="mb-4">
+                    <h3 class="section-title">Expériences professionnelles</h3>
+                    
+                    <div class="card-custom p-3 mb-3">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h5 class="fw-semibold">Huawei Technologies Tchad (DATACOM IP)</h5>
+                            <span class="badge bg-primary">Actuel</span>
+                        </div>
+                        <p class="text-muted small">Support ICT infrastructure & gestion réseau – Datacenter</p>
+                        <ul class="small">
+                            <li>Support infrastructure IT, gestion des réseaux dans les datacenters.</li>
+                            <li>Surveillance des performances, résolution de problèmes techniques, sécurité des opérations TIC.</li>
+                            <li>Contribution aux projets de transformation numérique et d'automatisation au Tchad.</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-custom p-3 mb-3">
+                        <h5 class="fw-semibold">Stage – Coris Banque International Tchad (Agence Centrale)</h5>
+                        <p class="text-muted small">Gestion des utilisateurs & infrastructure</p>
+                        <ul class="small">
+                            <li>Configuration des postes, gestion des incidents utilisateurs.</li>
+                            <li>Virtualisation sous ESXi, administration réseaux et systèmes.</li>
+                            <li>Outils de gestion systèmes, SQL Serveur.</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-custom p-3 mb-3">
+                        <h5 class="fw-semibold">Stage – Banque des États de l'Afrique Centrale (BEAC), Moundou</h5>
+                        <p class="text-muted small">Support IT & réseau</p>
+                        <ul class="small">
+                            <li>Configuration des postes, imprimantes et mise en réseau.</li>
+                            <li>Gestion des réseaux, participation au projet de bibliothèques de la BEAC.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Projets réalisés et en cours -->
+                <section class="mb-4">
+                    <h3 class="section-title">Projets marquants</h3>
+                    
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="card-custom p-3">
+                                <h6 class="fw-bold">Plateforme e-commerce "Marché Noir"</h6>
+                                <p class="small text-muted">Django, Bootstrap, Ajax – Gestion de stocks, paiements.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-custom p-3">
+                                <h6 class="fw-bold">Gestion de Bar / Hébergement / Dépôt</h6>
+                                <p class="small text-muted">Application Django – stocks, transactions, statistiques.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-custom p-3">
+                                <h6 class="fw-bold">Gestion de transfert (agences de voyage)</h6>
+                                <p class="small text-muted">Django, Ajax, jQuery – Recherche instantanée, stats.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-custom p-3">
+                                <h6 class="fw-bold">LAB Réseaux sur EVE-NG</h6>
+                                <p class="small text-muted">Construction réseaux d'entreprise, classification binaire.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-custom p-3">
+                                <h6 class="fw-bold">LAB Windows Server</h6>
+                                <p class="small text-muted">Active Directory, GPO, DHCP, serveur de mise à jour.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-custom p-3">
+                                <h6 class="fw-bold">Classification binaire (données bancaires)</h6>
+                                <p class="small text-muted">Projet data science – ML appliqué.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Objectifs professionnels (conservé) -->
+                <section class="mb-4">
+                    <h3 class="section-title">Objectifs professionnels</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-arrow-right text-primary me-2"></i>Devenir expert en intelligence artificielle et infrastructure sécurisée.</li>
+                        <li class="mb-2"><i class="fas fa-arrow-right text-primary me-2"></i>Développer des solutions innovantes pour l'Afrique (fintech, e-gov).</li>
+                    </ul>
+                </section>
+            </div>
         </div>
+    </main>
 
-        <img src="https://i.imgur.com/fhja1Of.jpeg" alt="Clotaire">
-
-        <div class="bottom-left-corner">
-            <hr class="hr1"><hr class="hr2">
+    <!-- Footer avec téléchargement et contact -->
+    <footer class="bg-light py-4 no-print mt-3 border-top">
+        <div class="container text-center">
+            <div class="footer-buttons mb-3">
+                <a href="#" onclick="alert('CV téléchargeable : version PDF à générer')" class="btn btn-primary me-2"><i class="fas fa-download me-2"></i>Télécharger CV (PDF)</a>
+                <a href="mailto:closygolf@gmail.com" class="btn btn-outline-secondary"><i class="fas fa-envelope me-2"></i>Me contacter</a>
+            </div>
+            <p class="text-muted small mb-0">&copy; 2025 Mbainaissem Clotaire – Tous droits réservés – Mise à jour février 2025</p>
         </div>
-    </div>
-</div>
+    </footer>
 
-<!-- ===== PROFIL ===== -->
-<div class="swiper-slide">
-<div class="about-us">
-<h1 class="heading">Profil</h1>
-
-<h3 class="sub-heading">
-IT Support & <span class="proffesions">Administration Systèmes & Réseaux</span>
-</h3>
-
-<p class="aboutme-deatils">
-Informaticien spécialisé en technologies de l’information et de la communication (TIC),
-avec expérience en télécommunications, banques et projets d’infrastructures numériques.
-Compétent en support IT, administration systèmes et réseaux, virtualisation,
-maintenance des équipements et assistance utilisateurs.
-Motivé à contribuer aux projets de transformation numérique du Tchad.
-</p>
-
-<div class="about-me-divison">
-
-<div class="about-me-table">
-<li><span>Ville :</span> Walia - Ndjamena</li>
-<li><span>Nationalité :</span> Tchadienne</li>
-<li><span>Date Naissance :</span> 02/09/2001</li>
-<li><span>Sexe :</span> Masculin</li>
-<li><span>Email :</span> closygolf@gmail.com</li>
-<li><span>Téléphone :</span> 64793416 / 66450370</li>
-<li><span>Site :</span> closy20.github.io</li>
-<li><span>Langues :</span> Français (Très Bien), Anglais (Intermédiaire)</li>
-
-<div class="buttonGroup">
-<button onclick="Navigate(4)">Contact</button>
-</div>
-</div>
-
-<div class="skill-bar">
-
-<li>
-<p>Administration Réseaux</p>
-<div class="bar"><div class="active-bar" style="width:90%"></div></div>
-</li>
-
-<li>
-<p>Cloud Computing</p>
-<div class="bar"><div class="active-bar" style="width:80%"></div></div>
-</li>
-
-<li>
-<p>Virtualisation (ESXi)</p>
-<div class="bar"><div class="active-bar" style="width:75%"></div></div>
-</li>
-
-<li>
-<p>SQL Server</p>
-<div class="bar"><div class="active-bar" style="width:70%"></div></div>
-</li>
-
-<li>
-<p>Cybersecurity</p>
-<div class="bar"><div class="active-bar" style="width:75%"></div></div>
-</li>
-
-</div>
-</div>
-</div>
-</div>
-
-<!-- ===== COMPETENCES ===== -->
-<div class="swiper-slide services">
-<h1 class="heading">Compétences & Certifications</h1>
-
-<div class="service">
-<i class="fa-solid fa-network-wired"></i>
-<h2>Huawei ICT Academy</h2>
-<p>Cybersecurity & Cloud Computing (IAM, VPN, VPC, Firewall, Linux).</p>
-</div>
-
-<div class="service">
-<i class="fa-solid fa-shield-halved"></i>
-<h2>Cisco Networking</h2>
-<p>Préparation certification CCNA – Practice Labs.</p>
-</div>
-
-<div class="service">
-<i class="fa-solid fa-server"></i>
-<h2>Windows Server</h2>
-<p>Active Directory, GPO, DHCP, Serveur de mise à jour.</p>
-</div>
-
-<div class="service">
-<i class="fa-solid fa-database"></i>
-<h2>Gestion Base de Données</h2>
-<p>SQL Server, gestion et maintenance des bases.</p>
-</div>
-
-<div class="service">
-<i class="fa-solid fa-diagram-project"></i>
-<h2>Gestion de Projets IT</h2>
-<p>Conception systèmes d'information & management IT.</p>
-</div>
-
-<div class="service">
-<i class="fa-solid fa-cloud"></i>
-<h2>Big Data & Automatisme</h2>
-<p>Concepts Big Data et transformation numérique.</p>
-</div>
-
-</div>
-
-<!-- ===== PROJETS ===== -->
-<div class="swiper-slide gallery">
-<h1 class="heading">Projets & Expériences</h1>
-
-<div class="project">
-<img src="https://picsum.photos/400/300?random=1">
-</div>
-
-<div class="project">
-<img src="https://picsum.photos/400/300?random=2">
-</div>
-
-<div class="project">
-<img src="https://picsum.photos/400/300?random=3">
-</div>
-
-</div>
-
-<!-- ===== CONTACT ===== -->
-<div class="swiper-slide contactMe">
-
-<h1 class="heading">Contact</h1>
-
-<div class="contactinfo">
-<i class="fa-solid fa-phone"></i>
-<h3>Téléphone</h3>
-<p>64793416 / 66450370</p>
-</div>
-
-<div class="contactinfo">
-<i class="fa-solid fa-location-dot"></i>
-<h3>Adresse</h3>
-<p>Walia - Ndjamena</p>
-</div>
-
-<div class="contactinfo">
-<i class="fa-solid fa-envelope"></i>
-<h3>Email</h3>
-<p>closygolf@gmail.com</p>
-</div>
-
-<div class="contactinfo">
-<i class="fa-solid fa-globe"></i>
-<h3>Site</h3>
-<p>closy20.github.io/portfolio</p>
-</div>
-
-<form>
-<h2>Envoyez-moi un message</h2>
-<input type="text" placeholder="Nom">
-<input type="email" placeholder="Email">
-<textarea rows="8" placeholder="Votre message..."></textarea>
-<button class="primary">Envoyer</button>
-</form>
-
-<footer>
-<li>© 2025 Mbainaissem Clotaire</li>
-</footer>
-
-</div>
-
-</div>
-</div>
-
-</main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
