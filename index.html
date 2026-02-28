@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Mbainaissem Clotaire | Développeur & Data Scientist</title>
 
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+    <!-- TON CSS -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- Swiper JS -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+
+    <!-- TON JS -->
     <script defer src="main.js"></script>
 </head>
 
@@ -17,7 +26,7 @@
 
 <main>
 
-    <!-- SIDEBAR -->
+    <!-- ===== SIDEBAR ===== -->
     <aside>
         <ul class="Links">
             <li onclick="Navigate(0)" class="activeLink">
@@ -26,35 +35,35 @@
             </li>
             <li onclick="Navigate(1)">
                 <i class="fa-solid fa-user"></i>
-                <p>À propos</p>
+                <p>À Propos</p>
             </li>
             <li onclick="Navigate(2)">
-                <i class="fa-solid fa-briefcase"></i>
+                <i class="fa-solid fa-list"></i>
                 <p>Services</p>
             </li>
             <li onclick="Navigate(3)">
-                <i class="fa-solid fa-folder-open"></i>
+                <i class="fa-solid fa-images"></i>
                 <p>Portfolio</p>
             </li>
             <li onclick="Navigate(4)">
-                <i class="fa-solid fa-envelope"></i>
+                <i class="fa-solid fa-comments"></i>
                 <p>Contact</p>
             </li>
         </ul>
     </aside>
 
-    <!-- SWIPER -->
+    <!-- ===== SWIPER ===== -->
     <div class="swiper mySwiper">
         <div class="SlideContainer swiper-wrapper">
 
-            <!-- HOME -->
+            <!-- ===== HOME ===== -->
             <div class="swiper-slide home-slide">
                 <div class="HomeContent">
                     <h1>Bonjour, je suis <span class="stylized-name">Clotaire</span></h1>
                     <h2><span class="proffesions">Développeur Web & Data Scientist</span></h2>
                     <p class="heroline">
-                        Je développe des applications web performantes et des solutions basées sur les données.
-                        Spécialisé en Django, SQL et Machine Learning, je crée des systèmes adaptés aux réalités africaines.
+                        Spécialisé en Django, SQL et Machine Learning, je développe des
+                        applications web performantes et des solutions intelligentes adaptées aux réalités africaines.
                     </p>
                     <div class="buttonGroup">
                         <button onclick="Navigate(4)">Me Contacter</button>
@@ -68,7 +77,7 @@
                         <hr class="hr2">
                     </div>
 
-                    <img src="https://i.imgur.com/fhja1Of.jpeg" alt="Mbainaissem Clotaire">
+                    <img src="https://i.imgur.com/fhja1Of.jpeg" alt="Clotaire">
 
                     <div class="bottom-left-corner">
                         <hr class="hr1">
@@ -77,32 +86,33 @@
                 </div>
             </div>
 
-            <!-- ABOUT -->
+            <!-- ===== ABOUT ===== -->
             <div class="swiper-slide">
                 <div class="about-us">
                     <h1 class="heading">À Propos</h1>
+
                     <h3 class="sub-heading">
                         Je suis Clotaire, <span class="proffesions">Développeur & Data Analyst</span>
                     </h3>
 
                     <p class="aboutme-deatils">
                         Informaticien passionné par le développement web et l’analyse de données.
-                        Je conçois des plateformes de gestion (commerce, transport, agences)
-                        et je m'intéresse particulièrement à l’intelligence artificielle et aux systèmes intelligents.
-                        Mon objectif est de créer des solutions technologiques innovantes pour l’Afrique.
+                        Je conçois des systèmes de gestion (commerce, transport, agences)
+                        et je m’intéresse particulièrement à l’intelligence artificielle.
+                        Mon objectif est de développer des solutions innovantes pour l’Afrique.
                     </p>
 
                     <div class="about-me-divison">
 
                         <!-- INFOS -->
                         <div class="about-me-table">
-                            <li><span>Projets réalisés :</span> 5+</li>
                             <li><span>Pays :</span> Tchad</li>
+                            <li><span>Ville :</span> Ndjamena</li>
                             <li><span>Disponibilité :</span> Freelance</li>
-                            <li><span>Spécialité :</span> Django & Data</li>
+                            <li><span>Expérience :</span> 5+ Projets</li>
                             <li><span>Email :</span> closygolf@gmail.com</li>
                             <li><span>Téléphone :</span> +235 64 79 34 16</li>
-                            <li><span>Technologies :</span> Python, SQL, ML</li>
+                            <li><span>Technologies :</span> Python, Django, SQL</li>
                             <li><span>Diplôme :</span> Licence Informatique</li>
 
                             <div class="buttonGroup">
@@ -153,7 +163,7 @@
                 </div>
             </div>
 
-            <!-- SERVICES -->
+            <!-- ===== SERVICES ===== -->
             <div class="swiper-slide services">
 
                 <h1 class="heading">Services</h1>
@@ -167,7 +177,7 @@
                 <div class="service">
                     <div class="service-icon"><i class="fa-solid fa-database"></i></div>
                     <h2>Analyse de Données</h2>
-                    <p>Traitement, exploration et visualisation de données.</p>
+                    <p>Exploration et visualisation de données.</p>
                 </div>
 
                 <div class="service">
@@ -179,13 +189,13 @@
                 <div class="service">
                     <div class="service-icon"><i class="fa-solid fa-network-wired"></i></div>
                     <h2>Systèmes & Réseaux</h2>
-                    <p>Installation et gestion d’infrastructures réseau.</p>
+                    <p>Installation et gestion réseau.</p>
                 </div>
 
                 <div class="service">
                     <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
                     <h2>Business Intelligence</h2>
-                    <p>Tableaux de bord et statistiques décisionnelles.</p>
+                    <p>Statistiques et tableaux de bord.</p>
                 </div>
 
                 <div class="service">
@@ -196,29 +206,24 @@
 
             </div>
 
-            <!-- PORTFOLIO -->
+            <!-- ===== PORTFOLIO ===== -->
             <div class="swiper-slide gallery">
-
                 <h1 class="heading">Portfolio</h1>
 
                 <div class="project">
                     <img src="https://picsum.photos/400/300?random=1" alt="">
-                    <h2>Plateforme E-commerce</h2>
                 </div>
 
                 <div class="project">
                     <img src="https://picsum.photos/400/300?random=2" alt="">
-                    <h2>Gestion Bar & Dépôt</h2>
                 </div>
 
                 <div class="project">
                     <img src="https://picsum.photos/400/300?random=3" alt="">
-                    <h2>Gestion Agence de Voyage</h2>
                 </div>
-
             </div>
 
-            <!-- CONTACT -->
+            <!-- ===== CONTACT ===== -->
             <div class="swiper-slide contactMe">
 
                 <h1 class="heading">Contact</h1>
@@ -244,7 +249,7 @@
                 <div class="contactinfo">
                     <i class="fa-solid fa-globe"></i>
                     <h3>LinkedIn</h3>
-                    <p>linkedin.com/in/clotaire-mbainaissem</p>
+                    <p>linkedin.com/in/clotaire-mbainaissem-549b88261</p>
                 </div>
 
                 <form>
@@ -256,7 +261,7 @@
                 </form>
 
                 <footer>
-                    <li>© 2025 Mbainaissem Clotaire. Tous droits réservés.</li>
+                    <li>© 2025 Mbainaissem Clotaire</li>
                 </footer>
 
             </div>
