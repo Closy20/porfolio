@@ -3,22 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mbainaissem Clotaire | IT & Réseaux</title>
 
-    <title>Mbainaissem Clotaire | Développeur & Data Scientist</title>
-
-    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-
-    <!-- TON CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Swiper JS -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
-
-    <!-- TON JS -->
     <script defer src="main.js"></script>
 </head>
 
@@ -26,250 +17,238 @@
 
 <main>
 
-    <!-- ===== SIDEBAR ===== -->
-    <aside>
-        <ul class="Links">
-            <li onclick="Navigate(0)" class="activeLink">
-                <i class="fa-solid fa-house"></i>
-                <p>Accueil</p>
-            </li>
-            <li onclick="Navigate(1)">
-                <i class="fa-solid fa-user"></i>
-                <p>À Propos</p>
-            </li>
-            <li onclick="Navigate(2)">
-                <i class="fa-solid fa-list"></i>
-                <p>Services</p>
-            </li>
-            <li onclick="Navigate(3)">
-                <i class="fa-solid fa-images"></i>
-                <p>Portfolio</p>
-            </li>
-            <li onclick="Navigate(4)">
-                <i class="fa-solid fa-comments"></i>
-                <p>Contact</p>
-            </li>
-        </ul>
-    </aside>
+<!-- ===== SIDEBAR ===== -->
+<aside>
+    <ul class="Links">
+        <li onclick="Navigate(0)" class="activeLink">
+            <i class="fa-solid fa-house"></i>
+            <p>Accueil</p>
+        </li>
+        <li onclick="Navigate(1)">
+            <i class="fa-solid fa-user"></i>
+            <p>Profil</p>
+        </li>
+        <li onclick="Navigate(2)">
+            <i class="fa-solid fa-briefcase"></i>
+            <p>Compétences</p>
+        </li>
+        <li onclick="Navigate(3)">
+            <i class="fa-solid fa-diagram-project"></i>
+            <p>Projets</p>
+        </li>
+        <li onclick="Navigate(4)">
+            <i class="fa-solid fa-envelope"></i>
+            <p>Contact</p>
+        </li>
+    </ul>
+</aside>
 
-    <!-- ===== SWIPER ===== -->
-    <div class="swiper mySwiper">
-        <div class="SlideContainer swiper-wrapper">
+<div class="swiper mySwiper">
+<div class="SlideContainer swiper-wrapper">
 
-            <!-- ===== HOME ===== -->
-            <div class="swiper-slide home-slide">
-                <div class="HomeContent">
-                    <h1>Bonjour, je suis <span class="stylized-name">Clotaire</span></h1>
-                    <h2><span class="proffesions">Développeur Web & Data Scientist</span></h2>
-                    <p class="heroline">
-                        Spécialisé en Django, SQL et Machine Learning, je développe des
-                        applications web performantes et des solutions intelligentes adaptées aux réalités africaines.
-                    </p>
-                    <div class="buttonGroup">
-                        <button onclick="Navigate(4)">Me Contacter</button>
-                        <button onclick="Navigate(3)">Voir Mes Projets</button>
-                    </div>
-                </div>
+<!-- ===== ACCUEIL ===== -->
+<div class="swiper-slide home-slide">
+    <div class="HomeContent">
+        <h1>Mbainaissem <span class="stylized-name">Clotaire</span></h1>
+        <h2><span class="proffesions">IT Support | Réseaux | Cloud | Datacenter</span></h2>
 
-                <div class="SideImg">
-                    <div class="top-right-corner">
-                        <hr class="hr1">
-                        <hr class="hr2">
-                    </div>
+        <p class="heroline">
+            Informaticien spécialisé en TIC avec expérience en télécommunications,
+            banques et infrastructures numériques. Actuellement chez
+            Huawei Technologies Tchad (DATACOM IP).
+        </p>
 
-                    <img src="https://i.imgur.com/fhja1Of.jpeg" alt="Clotaire">
-
-                    <div class="bottom-left-corner">
-                        <hr class="hr1">
-                        <hr class="hr2">
-                    </div>
-                </div>
-            </div>
-
-            <!-- ===== ABOUT ===== -->
-            <div class="swiper-slide">
-                <div class="about-us">
-                    <h1 class="heading">À Propos</h1>
-
-                    <h3 class="sub-heading">
-                        Je suis Clotaire, <span class="proffesions">Développeur & Data Analyst</span>
-                    </h3>
-
-                    <p class="aboutme-deatils">
-                        Informaticien passionné par le développement web et l’analyse de données.
-                        Je conçois des systèmes de gestion (commerce, transport, agences)
-                        et je m’intéresse particulièrement à l’intelligence artificielle.
-                        Mon objectif est de développer des solutions innovantes pour l’Afrique.
-                    </p>
-
-                    <div class="about-me-divison">
-
-                        <!-- INFOS -->
-                        <div class="about-me-table">
-                            <li><span>Pays :</span> Tchad</li>
-                            <li><span>Ville :</span> Ndjamena</li>
-                            <li><span>Disponibilité :</span> Freelance</li>
-                            <li><span>Expérience :</span> 5+ Projets</li>
-                            <li><span>Email :</span> closygolf@gmail.com</li>
-                            <li><span>Téléphone :</span> +235 64 79 34 16</li>
-                            <li><span>Technologies :</span> Python, Django, SQL</li>
-                            <li><span>Diplôme :</span> Licence Informatique</li>
-
-                            <div class="buttonGroup">
-                                <button onclick="Navigate(4)">Contact</button>
-                            </div>
-                        </div>
-
-                        <!-- SKILLS -->
-                        <div class="skill-bar">
-
-                            <li>
-                                <p>Python</p>
-                                <div class="bar">
-                                    <div class="active-bar" style="width:85%"></div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <p>Django</p>
-                                <div class="bar">
-                                    <div class="active-bar" style="width:80%"></div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <p>SQL</p>
-                                <div class="bar">
-                                    <div class="active-bar" style="width:75%"></div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <p>Machine Learning</p>
-                                <div class="bar">
-                                    <div class="active-bar" style="width:65%"></div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <p>Administration Réseau</p>
-                                <div class="bar">
-                                    <div class="active-bar" style="width:70%"></div>
-                                </div>
-                            </li>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ===== SERVICES ===== -->
-            <div class="swiper-slide services">
-
-                <h1 class="heading">Services</h1>
-
-                <div class="service">
-                    <div class="service-icon"><i class="fa-solid fa-code"></i></div>
-                    <h2>Développement Web</h2>
-                    <p>Applications web professionnelles avec Django.</p>
-                </div>
-
-                <div class="service">
-                    <div class="service-icon"><i class="fa-solid fa-database"></i></div>
-                    <h2>Analyse de Données</h2>
-                    <p>Exploration et visualisation de données.</p>
-                </div>
-
-                <div class="service">
-                    <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
-                    <h2>Machine Learning</h2>
-                    <p>Modèles prédictifs et solutions intelligentes.</p>
-                </div>
-
-                <div class="service">
-                    <div class="service-icon"><i class="fa-solid fa-network-wired"></i></div>
-                    <h2>Systèmes & Réseaux</h2>
-                    <p>Installation et gestion réseau.</p>
-                </div>
-
-                <div class="service">
-                    <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
-                    <h2>Business Intelligence</h2>
-                    <p>Statistiques et tableaux de bord.</p>
-                </div>
-
-                <div class="service">
-                    <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
-                    <h2>Solutions de Gestion</h2>
-                    <p>Systèmes pour commerce, transport et agences.</p>
-                </div>
-
-            </div>
-
-            <!-- ===== PORTFOLIO ===== -->
-            <div class="swiper-slide gallery">
-                <h1 class="heading">Portfolio</h1>
-
-                <div class="project">
-                    <img src="https://picsum.photos/400/300?random=1" alt="">
-                </div>
-
-                <div class="project">
-                    <img src="https://picsum.photos/400/300?random=2" alt="">
-                </div>
-
-                <div class="project">
-                    <img src="https://picsum.photos/400/300?random=3" alt="">
-                </div>
-            </div>
-
-            <!-- ===== CONTACT ===== -->
-            <div class="swiper-slide contactMe">
-
-                <h1 class="heading">Contact</h1>
-
-                <div class="contactinfo">
-                    <i class="fa-solid fa-phone"></i>
-                    <h3>Téléphone</h3>
-                    <p>+235 64 79 34 16</p>
-                </div>
-
-                <div class="contactinfo">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <h3>Localisation</h3>
-                    <p>Ndjamena, Tchad</p>
-                </div>
-
-                <div class="contactinfo">
-                    <i class="fa-regular fa-envelope"></i>
-                    <h3>Email</h3>
-                    <p>closygolf@gmail.com</p>
-                </div>
-
-                <div class="contactinfo">
-                    <i class="fa-solid fa-globe"></i>
-                    <h3>LinkedIn</h3>
-                    <p>linkedin.com/in/clotaire-mbainaissem-549b88261</p>
-                </div>
-
-                <form>
-                    <h2>Envoyez-moi un message</h2>
-                    <input type="text" placeholder="Nom">
-                    <input type="email" placeholder="Email">
-                    <textarea rows="8" placeholder="Votre message..."></textarea>
-                    <button class="primary">Envoyer</button>
-                </form>
-
-                <footer>
-                    <li>© 2025 Mbainaissem Clotaire</li>
-                </footer>
-
-            </div>
-
+        <div class="buttonGroup">
+            <button onclick="Navigate(4)">Me Contacter</button>
+            <button onclick="Navigate(3)">Voir Mes Projets</button>
         </div>
     </div>
 
-</main>
+    <div class="SideImg">
+        <div class="top-right-corner">
+            <hr class="hr1"><hr class="hr2">
+        </div>
 
+        <img src="https://i.imgur.com/fhja1Of.jpeg" alt="Clotaire">
+
+        <div class="bottom-left-corner">
+            <hr class="hr1"><hr class="hr2">
+        </div>
+    </div>
+</div>
+
+<!-- ===== PROFIL ===== -->
+<div class="swiper-slide">
+<div class="about-us">
+<h1 class="heading">Profil</h1>
+
+<h3 class="sub-heading">
+IT Support & <span class="proffesions">Administration Systèmes & Réseaux</span>
+</h3>
+
+<p class="aboutme-deatils">
+Informaticien spécialisé en technologies de l’information et de la communication (TIC),
+avec expérience en télécommunications, banques et projets d’infrastructures numériques.
+Compétent en support IT, administration systèmes et réseaux, virtualisation,
+maintenance des équipements et assistance utilisateurs.
+Motivé à contribuer aux projets de transformation numérique du Tchad.
+</p>
+
+<div class="about-me-divison">
+
+<div class="about-me-table">
+<li><span>Ville :</span> Walia - Ndjamena</li>
+<li><span>Nationalité :</span> Tchadienne</li>
+<li><span>Date Naissance :</span> 02/09/2001</li>
+<li><span>Sexe :</span> Masculin</li>
+<li><span>Email :</span> closygolf@gmail.com</li>
+<li><span>Téléphone :</span> 64793416 / 66450370</li>
+<li><span>Site :</span> closy20.github.io</li>
+<li><span>Langues :</span> Français (Très Bien), Anglais (Intermédiaire)</li>
+
+<div class="buttonGroup">
+<button onclick="Navigate(4)">Contact</button>
+</div>
+</div>
+
+<div class="skill-bar">
+
+<li>
+<p>Administration Réseaux</p>
+<div class="bar"><div class="active-bar" style="width:90%"></div></div>
+</li>
+
+<li>
+<p>Cloud Computing</p>
+<div class="bar"><div class="active-bar" style="width:80%"></div></div>
+</li>
+
+<li>
+<p>Virtualisation (ESXi)</p>
+<div class="bar"><div class="active-bar" style="width:75%"></div></div>
+</li>
+
+<li>
+<p>SQL Server</p>
+<div class="bar"><div class="active-bar" style="width:70%"></div></div>
+</li>
+
+<li>
+<p>Cybersecurity</p>
+<div class="bar"><div class="active-bar" style="width:75%"></div></div>
+</li>
+
+</div>
+</div>
+</div>
+</div>
+
+<!-- ===== COMPETENCES ===== -->
+<div class="swiper-slide services">
+<h1 class="heading">Compétences & Certifications</h1>
+
+<div class="service">
+<i class="fa-solid fa-network-wired"></i>
+<h2>Huawei ICT Academy</h2>
+<p>Cybersecurity & Cloud Computing (IAM, VPN, VPC, Firewall, Linux).</p>
+</div>
+
+<div class="service">
+<i class="fa-solid fa-shield-halved"></i>
+<h2>Cisco Networking</h2>
+<p>Préparation certification CCNA – Practice Labs.</p>
+</div>
+
+<div class="service">
+<i class="fa-solid fa-server"></i>
+<h2>Windows Server</h2>
+<p>Active Directory, GPO, DHCP, Serveur de mise à jour.</p>
+</div>
+
+<div class="service">
+<i class="fa-solid fa-database"></i>
+<h2>Gestion Base de Données</h2>
+<p>SQL Server, gestion et maintenance des bases.</p>
+</div>
+
+<div class="service">
+<i class="fa-solid fa-diagram-project"></i>
+<h2>Gestion de Projets IT</h2>
+<p>Conception systèmes d'information & management IT.</p>
+</div>
+
+<div class="service">
+<i class="fa-solid fa-cloud"></i>
+<h2>Big Data & Automatisme</h2>
+<p>Concepts Big Data et transformation numérique.</p>
+</div>
+
+</div>
+
+<!-- ===== PROJETS ===== -->
+<div class="swiper-slide gallery">
+<h1 class="heading">Projets & Expériences</h1>
+
+<div class="project">
+<img src="https://picsum.photos/400/300?random=1">
+</div>
+
+<div class="project">
+<img src="https://picsum.photos/400/300?random=2">
+</div>
+
+<div class="project">
+<img src="https://picsum.photos/400/300?random=3">
+</div>
+
+</div>
+
+<!-- ===== CONTACT ===== -->
+<div class="swiper-slide contactMe">
+
+<h1 class="heading">Contact</h1>
+
+<div class="contactinfo">
+<i class="fa-solid fa-phone"></i>
+<h3>Téléphone</h3>
+<p>64793416 / 66450370</p>
+</div>
+
+<div class="contactinfo">
+<i class="fa-solid fa-location-dot"></i>
+<h3>Adresse</h3>
+<p>Walia - Ndjamena</p>
+</div>
+
+<div class="contactinfo">
+<i class="fa-solid fa-envelope"></i>
+<h3>Email</h3>
+<p>closygolf@gmail.com</p>
+</div>
+
+<div class="contactinfo">
+<i class="fa-solid fa-globe"></i>
+<h3>Site</h3>
+<p>closy20.github.io/portfolio</p>
+</div>
+
+<form>
+<h2>Envoyez-moi un message</h2>
+<input type="text" placeholder="Nom">
+<input type="email" placeholder="Email">
+<textarea rows="8" placeholder="Votre message..."></textarea>
+<button class="primary">Envoyer</button>
+</form>
+
+<footer>
+<li>© 2025 Mbainaissem Clotaire</li>
+</footer>
+
+</div>
+
+</div>
+</div>
+
+</main>
 </body>
 </html>
